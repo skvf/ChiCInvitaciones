@@ -1,0 +1,263 @@
+/* =========================
+   🎯 DESIGN TOKENS
+========================= */
+
+:root {
+  /* CORES */
+  --color-primary:  #ecc0e6;
+  --color-accent: #4e0740;
+  --color-text:  #2c0b1e;
+  --color-support: #ad7b83;
+
+  /* TIPOGRAFIA */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Montserrat', sans-serif;
+
+  --font-size-title: 2rem;
+  --font-size-subtitle: 1.3rem;
+  --font-size-text: 1rem;
+
+  /* ESPAÇAMENTO */
+  --space-xs: 5px;
+  --space-sm: 10px;
+  --space-md: 20px;
+  --space-lg: 40px;
+  --space-xl: 80px;
+
+  /* BORDAS */
+  --radius: 12px;
+}
+
+
+/* =========================
+   🔄 RESET BÁSICO
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   🧱 BASE
+========================= */
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* =========================
+   🔤 TIPOGRAFIA
+========================= */
+
+.title {
+  font-family: var(--font-heading);
+  color: var(--color-accent);
+  font-size: var(--font-size-title);
+  margin-bottom: var(--space-md);
+}
+
+.text {
+  font-size: var(--font-size-text);
+}
+
+
+/* =========================
+   📦 LAYOUT
+========================= */
+
+.section {
+  padding: var(--space-xl) var(--space-md);
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* =========================
+   🎴 CARD
+========================= */
+
+.card {
+  background-size: cover;
+  background-position: center;
+  padding: var(--space-lg);
+  border-radius: var(--radius);
+  max-width: 500px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.7); /* overlay leve */
+}
+
+
+/* =========================
+   🔘 BOTÕES
+========================= */
+
+.button {
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: 0.3s;
+}
+
+.button--primary {
+  background: var(--color-accent);
+  color: white;
+}
+
+.button--primary:hover {
+  opacity: 0.8;
+}
+
+.button--secondary {
+  background: transparent;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+}
+
+.button--secondary:hover {
+  background: var(--color-accent);
+  color: white;
+}
+
+
+/* =========================
+   📝 FORMULÁRIOS
+========================= */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-width: 300px;
+  margin: auto;
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid var(--color-support);
+  font-family: var(--font-body);
+}
+
+
+/* =========================
+   ⏳ CONTAGEM
+========================= */
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.countdown__number {
+  font-size: 1.5rem;
+  color: var(--color-accent);
+}
+
+
+/* =========================
+   🖼️ GALERIA
+========================= */
+
+.image {
+  margin-bottom: var(--space-sm);
+  border-radius: var(--radius);
+}
+
+
+/* =========================
+   📅 ITINERÁRIO
+========================= */
+
+.timeline__event {
+  margin: var(--space-sm) 0;
+}
+
+
+/* =========================
+   🧭 TABS (RECOMENDAÇÕES)
+========================= */
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+
+/* =========================
+   🎨 MODIFICADORES (SEÇÕES)
+========================= */
+
+.section--hero {
+  background-image: url('bg-header.webp');
+}
+
+.section--quote {
+  background-image: url('bg-quote.webp');
+}
+
+.section--gallery {
+  background-image: url('bg-gallery.webp');
+}
+
+.section--timeline {
+  background-image: url('bg-timeline.webp');
+}
+
+.section--location {
+  background-image: url('bg-location.webp');
+}
+
+.section--details {
+  background-image: url('bg-details.webp');
+}
+
+.section--recommendations {
+  background-image: url('bg-recommendations.webp');
+}
+
+.section--rsvp {
+  background-image: url('bg-rsvp.webp');
+}
+
+.section--footer {
+  background-image: url('bg-footer.webp');
+}
+
+
+/* =========================
+   📱 RESPONSIVIDADE
+========================= */
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .section {
+    padding: var(--space-xl);
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+}
